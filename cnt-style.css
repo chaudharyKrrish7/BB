@@ -16,7 +16,7 @@ body {
     font-weight: light-300;
     line-height: 1.6; /* Improved readability */
     color: #333; /* Default text color */
-    background-color: rgba(247,243,242,255);
+    background-color: black;
 }
 
 /* Navbar Links (Increased Size & Spacing) */
@@ -405,7 +405,8 @@ h1,h2,h3 {
 /* NEW: Contact Form Section Styles */
 .contact-form-section {
     padding: 50px 0;
-    background-color: rgba(247,243,242,255);
+    /* background-color: rgba(247,243,242,255); */
+    
     
 }
 
@@ -418,6 +419,7 @@ h1,h2,h3 {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
 }
 
 .form-image-container {
@@ -553,5 +555,5 @@ h1,h2,h3 {
     }
 }
 .form-content-container{
-    background: url('./images/weddBg.jpeg');
+    background-color: #000;
 }
