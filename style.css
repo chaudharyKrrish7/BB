@@ -105,6 +105,14 @@ body {
     
 }
 
+.navbar-logo-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensure the link takes up the full width of its container */
+    padding-top: 13vh;
+    
+}
 .navbar-scrolled .nav-link {
     color: #000 !important; /* Change link color to black on scroll */
 }
@@ -127,6 +135,8 @@ body {
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
 }
+
+
 
 /* Specific styles for the "About Us" card */
 .abtcard {
@@ -367,4 +377,7 @@ h1,h2,h3 {
     text-align: center;
     font-size: 0.85rem;
     margin-top: 4rem;
+}
+.navbar-toggler-icon{
+    filter: invert(1);
 }
