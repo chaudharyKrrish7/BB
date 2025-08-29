@@ -1,0 +1,634 @@
+/* Universal Reset */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Added for better box model handling */
+}
+
+/* Base Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: light-300;
+    line-height: 1.6; /* Improved readability */
+    color: #333; /* Default text color */
+    background-color: rgba(247,243,242,255);
+}
+
+/* Navbar Links (Increased Size & Spacing) */
+.navbar-nav .nav-link {
+    position: relative;
+    font-size: 1.3rem; /* Increased font size */
+    margin-left: 1.2rem; /* Increased spacing to the left */
+    margin-right: 1.2rem; /* Increased spacing to the right */
+    transition: color 0.6s ease; /* Smooth color transition */
+    
+}
+
+/* Hover Effect: Underline */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0; /* Position underline at the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center the underline */
+    background: #ffffff; /* Underline color */
+    transition: width 0.6s ease;
+}
+
+
+
+.navbar-nav .nav-link:hover::after {
+    width: 80%; /* Width on hover */
+}
+
+.nav-link{
+    font-family: "Kugile_demo", sans-serif;
+}
+/* Centered Text on Image */
+.custom-centered-text {
+    position: absolute; /* Changed from just 'top: 50%' etc. to include position */
+    top: 50%;
+    bottom: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 90%; /* Ensure text doesn't overflow on small screens */
+    max-width: 800px; /* Limit width for large screens */
+}
+
+/* "Plan Now!!" Button Styles */
+.btnPlan {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+    border-radius: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none; /* Ensure no underline */
+    display: inline-block; /* For proper padding and hover effect */
+}
+
+.btnPlan:hover {
+    color: #000;
+}
+
+.btnPlan::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: left 0.4s ease-in-out;
+    z-index: -1;
+}
+
+.btnPlan:hover::before {
+    left: 0;
+}
+
+/* Navbar Scrolled State */
+.navbar-scrolled {
+    background-color: #fff !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.6s ease-in-out;
+    
+}
+
+.navbar-logo-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensure the link takes up the full width of its container */
+    padding-top: 13vh;
+    
+}
+.navbar-scrolled .nav-link {
+    color: #000 !important; /* Change link color to black on scroll */
+}
+
+/* Adjust hover effect for scrolled state */
+.navbar-scrolled .nav-link:hover {
+    color: #000; /* Ensure color stays black on hover */
+}
+
+.navbar-scrolled .nav-link::after {
+    background: #000 !important; /* Underline color becomes black on scroll */
+}
+
+.hero-section {
+    position: relative; /* Needed for positioning the text */
+    width: 100%;
+    height: 100vh; /* Set the height to the full viewport height */
+    background-image: url('./images/abt-banner.jpg');
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.hero-section-more {
+    position: relative; /* Needed for positioning the text */
+    width: 100%;
+    height: 100vh; /* Set the height to the full viewport height */
+    /* background-image: url('./images/mainBanner.jpg'); */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+
+
+
+/* Specific styles for the "About Us" card */
+.abtcard {
+    border: none; /* Remove default Bootstrap card border */
+    border-radius: 1rem; /* Rounded corners */
+    overflow: hidden; /* Ensures content respects border-radius */
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15); /* Soft shadow */
+    margin-top: 2rem; /* Add some space from the hero section */
+    margin-bottom: 2rem;
+}
+
+.abtcard .card-body {
+    padding: 1rem; /* Consistent padding */
+    display: flex; /* Use flexbox to align content if needed */
+    flex-direction: column;
+    justify-content: center;
+}
+
+.abtcard .card-title {
+    text-align: ce;
+    color: #333;
+    font-size: 2.5rem; /* Larger title for impact */
+    margin-bottom: 1.5rem; /* Space below title */
+    font-weight: bold;
+}
+
+.abtcard .card-text {
+    text-align: left;
+    color: #555; /* Slightly lighter text color for body */
+    font-size: 1.1rem; /* Slightly larger body text */
+}
+
+/* Image scaling for the About Us section */
+.abtcard .col-md-4 {
+    position: relative;
+    min-height: 300px; /* Ensure a minimum height for the image container */
+}
+
+.abtcard .col-md-4 img {
+    width: 100%; /* Image takes full width of its column */
+    height: 100%; /* Image takes full height of its column */
+    object-fit: cover; /* Ensures the image covers the entire area without distortion, cropping if necessary */
+    border-radius: 1rem 0 0 1rem; /* Rounded left corners for desktop */
+}
+
+/* Adjust image border-radius for mobile */
+@media (max-width: 767.98px) {
+    .abtcard .col-md-4 img {
+        border-radius: 1rem 1rem 0 0; /* Rounded top corners for mobile */
+    }
+}
+
+
+/* Styles for mobile and smaller devices (default) */
+.container-fluid {
+    padding-left: 1rem; /* Adjust this value as needed */
+    padding-right: 1rem ;/* Adjust this value as needed */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
+}
+
+/* Styles for desktop and larger devices */
+@media (min-width: 768px) {
+    .container-fluid {
+        padding-left: 1rem; /* Large padding for PC */
+        padding-right: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        display:flex; 
+        justify-content:center;
+    }
+}
+
+.abtcard {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .abtcard {
+        width: 80%;
+    }
+}
+
+
+.container-fluid{
+    background: url('./images/weddBg.jpeg');
+}
+
+
+@font-face {
+    font-family: "Kugile_demo";
+    src: url("./Kugile_Demo.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1,h2,h3 {
+    font-family: "Kugile_demo", sans-serif;
+    
+}
+
+/* Gallery Item Styling */
+.gallery {
+    position: relative;
+    /* border: 1px solid #ccc; */
+    flex-basis: 220px;
+    flex-grow: 1;
+    max-width: 25%;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: 0.4s ease-out;
+}
+
+.gallery:hover {
+    /* border: 1px solid #777; */
+    transform: scale(1.03);
+    transition: 0.4s ease-in-out;
+    
+}
+
+.gallery img {
+    width: 120%;
+    height: auto;
+    display: block;
+}
+
+.desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Default state: visible and opaque */
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.gallery:hover .desc {
+    /* On hover: hidden and transparent */
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* The rest of the CSS remains the same */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .gallery {
+        flex-basis: 45%;
+        max-width: 45%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .gallery {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+.clearfix {
+    display: none;
+}
+/* --- Footer Styles (White Theme) --- */
+.main-footer {
+    background-color: #f8f8f8; /* Light background for footer */
+    color: #333; /* Dark text color */
+    padding: 4rem 0; /* Ample padding top and bottom */
+    font-size: 0.95rem;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05); /* Subtle shadow at the top of the footer */
+}
+
+.main-footer a {
+    color: #555; /* Darker links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-footer a:hover {
+    color: #ff69b4; /* Pink on hover */
+}
+
+.footer-heading {
+    color: #333; /* Dark headings */
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #ff69b4; /* Pink underline */
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    font-family: "Kugile_demo", sans-serif;
+    font-weight: normal;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-contact p {
+    margin-bottom: 0.8rem;
+    color: #4a4a4a; /* Slightly darker contact info */
+}
+
+.social-icons a {
+    font-size: 1.8rem;
+    margin-right: 1.2rem;
+    color: #555; /* Dark social icons */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff69b4; /* Pink on hover */
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    background-color: #e0e0e0; /* Slightly darker white for copyright section */
+    color: #666; /* Darker gray text */
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.85rem;
+    margin-top: 4rem;
+}
+.navbar-toggler-icon{
+    filter: invert(1);
+}
+
+.card-title{
+    text-align: center;
+}
+
+.cntHead{
+    text-align: center;
+    color: white;
+}
+
+/* NEW: Contact Form Section Styles */
+.contact-form-section {
+    padding: 50px 0;
+    background-color: rgba(247,243,242,255);
+    
+}
+
+.form-wrapper {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f5f2ef;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-image-container {
+    flex: 1.2;
+    overflow: hidden;
+}
+
+.form-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.form-content-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.form-inner-wrapper {
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-inner-wrapper h2 {
+    font-size: 2em;
+    font-weight: 600;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.form-inner-wrapper .description {
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.form-field-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 1em;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #999;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+.form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="%23999" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 120px;
+}
+
+.submit-btn {
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    font-size: 1em;
+    font-weight: 500;
+    color: #333;
+    background-color: #f5f2ef;
+    border: 2px solid #333;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* New Responsive Design for Form */
+@media (max-width: 768px) {
+    .form-wrapper {
+        flex-direction: column;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .form-image-container {
+        display: none;
+    }
+    
+    .form-content-container {
+        padding: 20px;
+    }
+
+    .form-field-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.form-content-container{
+    background: url('./images/weddBg.jpeg');
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-header {
+    font-family: "Kugile_demo", sans-serif;
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    position: relative;
+    text-shadow: 10px 10px 25px 10px black;
+}
+
+.about-header::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.about-intro, .about-details {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+}
+
+.details-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    text-align: left;
+}
+
+.detail-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.detail-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    font-family: "Kugile_demo", sans-serif;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    color: black
+}
+
+@media (max-width: 768px) {
+    .about-header {
+        font-size: 2.5rem;
+    }
+}
