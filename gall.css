@@ -1,10 +1,11 @@
 /* Universal Reset */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Added for better box model handling */
+    box-sizing: border-box;
 }
 
 /* Base Body Styles */
@@ -13,20 +14,19 @@ body {
     padding: 0;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
-    font-weight: light-300;
-    line-height: 1.6; /* Improved readability */
-    color: #333; /* Default text color */
+    font-weight: 300;
+    line-height: 1.6;
+    color: #333;
     background-color: rgba(247,243,242,255);
 }
 
 /* Navbar Links (Increased Size & Spacing) */
 .navbar-nav .nav-link {
     position: relative;
-    font-size: 1.3rem; /* Increased font size */
-    margin-left: 1.2rem; /* Increased spacing to the left */
-    margin-right: 1.2rem; /* Increased spacing to the right */
-    transition: color 0.6s ease; /* Smooth color transition */
-    
+    font-size: 1.3rem;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    transition: color 0.6s ease;
 }
 
 /* Hover Effect: Underline */
@@ -35,33 +35,32 @@ body {
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: 0; /* Position underline at the bottom */
+    bottom: 0;
     left: 50%;
-    transform: translateX(-50%); /* Center the underline */
-    background: #ffffff; /* Underline color */
+    transform: translateX(-50%);
+    background: #ffffff;
     transition: width 0.6s ease;
 }
 
-
-
 .navbar-nav .nav-link:hover::after {
-    width: 80%; /* Width on hover */
+    width: 80%;
 }
 
-.nav-link{
+.nav-link {
     font-family: "Kugile_demo", sans-serif;
 }
+
 /* Centered Text on Image */
 .custom-centered-text {
-    position: absolute; /* Changed from just 'top: 50%' etc. to include position */
+    position: absolute;
     top: 50%;
     bottom: auto;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    width: 90%; /* Ensure text doesn't overflow on small screens */
-    max-width: 800px; /* Limit width for large screens */
+    width: 90%;
+    max-width: 800px;
 }
 
 /* "Plan Now!!" Button Styles */
@@ -76,8 +75,8 @@ body {
     border-radius: 40px;
     padding-left: 30px;
     padding-right: 30px;
-    text-decoration: none; /* Ensure no underline */
-    display: inline-block; /* For proper padding and hover effect */
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btnPlan:hover {
@@ -105,66 +104,60 @@ body {
     background-color: #fff !important;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.6s ease-in-out;
-    
 }
 
 .navbar-logo-link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Ensure the link takes up the full width of its container */
+    width: 100%;
     padding-top: 13vh;
-    
 }
+
 .navbar-scrolled .nav-link {
-    color: #000 !important; /* Change link color to black on scroll */
+    color: #000 !important;
 }
 
 /* Adjust hover effect for scrolled state */
 .navbar-scrolled .nav-link:hover {
-    color: #000; /* Ensure color stays black on hover */
+    color: #000;
 }
 
 .navbar-scrolled .nav-link::after {
-    background: #000 !important; /* Underline color becomes black on scroll */
+    background: #000 !important;
 }
 
 .hero-section {
-    position: relative; /* Needed for positioning the text */
+    position: relative;
     width: 100%;
-    height: 100vh; /* Set the height to the full viewport height */
-    background-image: url('./images/mainBanner.jpg');
-    background-size: cover; /* Ensures the image covers the entire container */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-section-more {
-    position: relative; /* Needed for positioning the text */
+    position: relative;
     width: 100%;
-    height: 100vh; /* Set the height to the full viewport height */
-    /* background-image: url('./images/mainBanner.jpg'); */
-    background-size: cover; /* Ensures the image covers the entire container */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
-
-
 
 /* Specific styles for the "About Us" card */
 .abtcard {
-    border: none; /* Remove default Bootstrap card border */
-    border-radius: 1rem; /* Rounded corners */
-    overflow: hidden; /* Ensures content respects border-radius */
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15); /* Soft shadow */
-    margin-top: 2rem; /* Add some space from the hero section */
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
 .abtcard .card-body {
-    padding: 1rem; /* Consistent padding */
-    display: flex; /* Use flexbox to align content if needed */
+    padding: 1rem;
+    display: flex;
     flex-direction: column;
     justify-content: center;
 }
@@ -172,51 +165,49 @@ body {
 .abtcard .card-title {
     text-align: ce;
     color: #333;
-    font-size: 2.5rem; /* Larger title for impact */
-    margin-bottom: 1.5rem; /* Space below title */
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
     font-weight: bold;
 }
 
 .abtcard .card-text {
     text-align: left;
-    color: #555; /* Slightly lighter text color for body */
-    font-size: 1.1rem; /* Slightly larger body text */
+    color: #555;
+    font-size: 1.1rem;
 }
 
 /* Image scaling for the About Us section */
 .abtcard .col-md-4 {
     position: relative;
-    min-height: 300px; /* Ensure a minimum height for the image container */
+    min-height: 300px;
 }
 
 .abtcard .col-md-4 img {
-    width: 100%; /* Image takes full width of its column */
-    height: 100%; /* Image takes full height of its column */
-    object-fit: cover; /* Ensures the image covers the entire area without distortion, cropping if necessary */
-    border-radius: 1rem 0 0 1rem; /* Rounded left corners for desktop */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem 0 0 1rem;
 }
 
 /* Adjust image border-radius for mobile */
 @media (max-width: 767.98px) {
     .abtcard .col-md-4 img {
-        border-radius: 1rem 1rem 0 0; /* Rounded top corners for mobile */
+        border-radius: 1rem 1rem 0 0;
     }
 }
 
-
 /* Styles for mobile and smaller devices (default) */
 .container-fluid {
-    padding-left: 1rem; /* Adjust this value as needed */
-    padding-right: 1rem ;/* Adjust this value as needed */
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    
 }
 
 /* Styles for desktop and larger devices */
 @media (min-width: 768px) {
     .container-fluid {
-        padding-left: 1rem; /* Large padding for PC */
+        padding-left: 1rem;
         padding-right: 1rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
@@ -234,11 +225,9 @@ body {
     }
 }
 
-
-.container-fluid{
+.container-fluid {
     background: url('./images/weddBg.jpeg');
 }
-
 
 @font-face {
     font-family: "Kugile_demo";
@@ -249,13 +238,11 @@ body {
 
 h1,h2,h3 {
     font-family: "Kugile_demo", sans-serif;
-    
 }
 
 /* Gallery Item Styling */
 .gallery {
     position: relative;
-    /* border: 1px solid #ccc; */
     flex-basis: 220px;
     flex-grow: 1;
     max-width: 25%;
@@ -265,16 +252,8 @@ h1,h2,h3 {
 }
 
 .gallery:hover {
-    /* border: 1px solid #777; */
     transform: scale(1.03);
     transition: 0.4s ease-in-out;
-    
-}
-
-.gallery img {
-    width: 120%;
-    height: auto;
-    display: block;
 }
 
 .desc {
@@ -286,14 +265,12 @@ h1,h2,h3 {
     text-align: center;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Default state: visible and opaque */
     visibility: visible;
     opacity: 1;
     transition: opacity 0.3s, visibility 0.3s;
 }
 
 .gallery:hover .desc {
-    /* On hover: hidden and transparent */
     visibility: hidden;
     opacity: 0;
 }
@@ -329,28 +306,28 @@ h1,h2,h3 {
 }
 /* --- Footer Styles (White Theme) --- */
 .main-footer {
-    background-color: #f8f8f8; /* Light background for footer */
-    color: #333; /* Dark text color */
-    padding: 4rem 0; /* Ample padding top and bottom */
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 4rem 0;
     font-size: 0.95rem;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.05); /* Subtle shadow at the top of the footer */
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
 }
 
 .main-footer a {
-    color: #555; /* Darker links */
+    color: #555;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .main-footer a:hover {
-    color: #ff69b4; /* Pink on hover */
+    color: #ff69b4;
 }
 
 .footer-heading {
-    color: #333; /* Dark headings */
+    color: #333;
     font-size: 1.6rem;
     margin-bottom: 1.5rem;
-    border-bottom: 2px solid #ff69b4; /* Pink underline */
+    border-bottom: 2px solid #ff69b4;
     padding-bottom: 0.5rem;
     display: inline-block;
     font-family: "Kugile_demo", sans-serif;
@@ -369,38 +346,38 @@ h1,h2,h3 {
 
 .footer-contact p {
     margin-bottom: 0.8rem;
-    color: #4a4a4a; /* Slightly darker contact info */
+    color: #4a4a4a;
 }
 
 .social-icons a {
     font-size: 1.8rem;
     margin-right: 1.2rem;
-    color: #555; /* Dark social icons */
+    color: #555;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #ff69b4; /* Pink on hover */
+    color: #ff69b4;
     transform: translateY(-3px);
 }
 
 .footer-bottom {
-    background-color: #e0e0e0; /* Slightly darker white for copyright section */
-    color: #666; /* Darker gray text */
+    background-color: #e0e0e0;
+    color: #666;
     padding: 1.5rem 0;
     text-align: center;
     font-size: 0.85rem;
     margin-top: 4rem;
 }
-.navbar-toggler-icon{
+.navbar-toggler-icon {
     filter: invert(1);
 }
 
-.card-title{
+.card-title {
     text-align: center;
 }
 
-.cntHead{
+.cntHead {
     text-align: center;
     color: white;
 }
@@ -409,7 +386,6 @@ h1,h2,h3 {
 .contact-form-section {
     padding: 50px 0;
     background-color: rgba(247,243,242,255);
-    
 }
 
 .form-wrapper {
@@ -555,6 +531,226 @@ h1,h2,h3 {
         grid-template-columns: 1fr;
     }
 }
-.form-content-container{
+
+.form-content-container {
     background: url('./images/weddBg.jpeg');
+}
+
+.header {
+    text-align: center;
+    background-image: url("https://digitalforge.qa/images/codepen/grange-pattern.png");
+    background-color:#f3f3f3;
+    padding: 32px;
+    border-bottom:2px solid #222;
+}
+
+.footer {
+    text-align: center;
+    background-image: url("images/grange-pattern.png");
+    background-color:#f3f3f3;
+    padding: 32px;
+    border-top:2px solid #222;
+    margin-top:45px;
+}
+
+/* Re-defined main gallery container */
+.main.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Aligns items to the top */
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Updated column styles for responsive behavior */
+.column {
+    flex: 1;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+/* Updated image container and image styles for consistent height */
+.column a {
+    display: block;
+    width: 100%;
+    height: 300px; /* Set a consistent height for all images */
+    overflow: hidden; /* Hide any overflow */
+    margin-top: 8px;
+}
+
+.column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This is the key property to make images fill the container without distortion */
+    vertical-align: middle;
+    cursor:pointer;
+    opacity: 0.9;
+    transition: transform .2s, opacity .2s;
+}
+
+.column img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1200px) {
+    .main.gallery-container {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+    .main.gallery-container {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+    .main.gallery-container {
+        max-width: 100%;
+    }
+    .column a {
+        height: 250px; /* Adjust height for smaller screens */
+    }
+}
+
+.credits {
+    margin-top:50px; 
+    padding:20px;
+    background:white;
+    border-radius:5px;
+    width:450px;
+    text-align:center;
+    color:gray;
+}
+
+a {
+    color:#000000;
+    text-decoration:none;
+    font-family: 'Quicksand', sans-serif;
+}
+
+a:hover {
+    color:#006;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 300px; /* or any fixed height you prefer */
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Lightbox Modal */
+.lightbox {
+    position: fixed; /* Ensures it stays in place relative to the viewport */
+    z-index: 9999;   /* A very high value to place it on top of other elements */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;   /* Stays hidden until activated by JavaScript */
+    overflow: auto;
+    backdrop-filter: blur(5px); /* Optional: Adds a nice blurred background effect */
+}
+
+/* Also, ensure your .lightbox-content is correctly positioned */
+.lightbox-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    max-width: 90%;
+    max-height: 90vh;
+    margin: auto;
+}
+#lightbox-img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 8px;
+}
+
+.close-btn {
+    /* margin-top: 50px; */
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover, .close-btn:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    text-decoration: none;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 768px) {
+    .prev, .next {
+        font-size: 16px;
+        padding: 10px;
+    }
 }

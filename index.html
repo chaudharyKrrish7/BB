@@ -19,22 +19,22 @@
         <div class="collapse navbar-collapse justify-content-center " id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link text-white" href="#">Home</a>
+                    <a class="nav-link text-white"   href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Services</a>
+                    <a class="nav-link text-white"   href="#">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">About</a>
+                    <a class="nav-link text-white"   href="#">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Gallery</a>
+                    <a class="nav-link text-white"   href="#">Gallery</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Blog</a>
+                    <a class="nav-link text-white"   href="#">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Contact</a>
+                    <a class="nav-link text-white"   href="contact.html">Contact</a>
                 </li>
             </ul>
         </div>
@@ -105,6 +105,56 @@
     <div class="desc">Add a description of the image here</div>
   </div>
 </div>
+
+<br><br>
+<h1 style="text-align: center; margin-bottom: 20px; color: rgb(228, 10, 86);" >Contact Us</h1>
+
+<div class="contact-form-section" >
+    <div class="form-wrapper">
+        <div class="form-image-container">
+            <img src="./images/cnt.jpg" alt="Hospitality Desk">
+        </div>
+        <div class="form-content-container">
+            <div class="form-inner-wrapper">
+                <h2>Let's Talk!</h2>
+                <p class="description">We would love to hear from you! Contact us directly by filling this form.</p>
+                <form id="whatsapp-form">
+                    <div class="form-field-grid">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Your Phone *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="date" name="date" placeholder="Date of Function *" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="gathering-size" name="gathering-size" placeholder="Gathering Size *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="location" name="location" placeholder="Preferred Location *" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="budget" name="budget">
+                                <option value="" disabled selected>Select Budget</option>
+                                <option value="10k-50k">10,000 - 50,000</option>
+                                <option value="50k-100k">50,000 - 100,000</option>
+                                <option value="100k+">100,000+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="tell-more" name="tell-more" rows="4" placeholder="Tell Us More"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">SEND YOUR MESSAGE</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
 <!-- Main Footer -->
     <footer class="main-footer">
         <div class="container">
